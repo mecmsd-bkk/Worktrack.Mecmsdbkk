@@ -3,42 +3,24 @@
 <head>
     <base target="_top">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>WORKTRACK</title>
+    
     <style>
-        html, body {
+        /* ตั้งค่าให้เต็มหน้าจอและลบขอบขาว */
+        body, html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
-            background: #f8f9fa;
-            font-family: Arial, sans-serif;
+            overflow: hidden; /* ซ่อน Scrollbar ของตัวหน้าหลัก */
+            background-color: #f8f9fa;
         }
 
-        .app-shell {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            height: 100%;
-        }
-
-        .topbar {
-            height: 56px;
-            display: flex;
-            align-items: center;
-            padding: 0 16px;
-            background: #ffffff;
-            border-bottom: 1px solid #ddd;
-            box-sizing: border-box;
-        }
-
-        .frame-wrap {
-            flex: 1;
-            min-height: 0;
-        }
-
+        /* ตั้งค่า Iframe ให้ยืดเต็มพื้นที่ */
         iframe {
-            display: block;
+            display: block; /* ลบช่องว่างด้านล่างที่มักเกิดใน iframe */
             width: 100%;
             height: 100%;
             border: none;
@@ -46,17 +28,11 @@
     </style>
 </head>
 <body>
-    <div class="app-shell">
-        <div class="topbar">
-            WORKTRACK
-        </div>
 
-        <div class="frame-wrap">
-            <iframe
-                src="https://script.google.com/macros/s/AKfycby1YvojUG0g3c7LfUiY-fV7qEPJH26pQfABhPtO4DpXqXu9tHyi4iFv0sqlvWMYdMe7/exec"
-                allow="geolocation; microphone; camera">
-            </iframe>
-        </div>
-    </div>
+    <iframe 
+        src="https://script.google.com/macros/s/AKfycby1YvojUG0g3c7LfUiY-fV7qEPJH26pQfABhPtO4DpXqXu9tHyi4iFv0sqlvWMYdMe7/exec" 
+        allow="geolocation; microphone; camera">
+    </iframe>
+
 </body>
 </html>
